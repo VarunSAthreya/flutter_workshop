@@ -20,20 +20,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late List<Note> _notes;
-  bool _isLoading = true;
-
-  @override
-  void initState() {
-    getNotes();
-    super.initState();
-  }
-
-  Future<void> getNotes() async {
-    _notes = await Note.getNotes();
-    setState(() {
-      _isLoading = false;
-    });
-  }
 
   void snackbar(String message) {
     ScaffoldMessenger.of(context)
@@ -105,14 +91,6 @@ class _MyHomePageState extends State<MyHomePage> {
       desc: desc,
       date: DateTime.now(),
     );
-    Note.updateNote(
-      Note(
-        id: id,
-        title: title,
-        desc: desc,
-        date: DateTime.now(),
-      ),
-    );
     snackbar("Updated Note!");
   }
 
@@ -127,14 +105,6 @@ class _MyHomePageState extends State<MyHomePage> {
           desc: desc,
           date: DateTime.now(),
         ));
-    Note.insertNote(
-      Note(
-        id: id,
-        title: title,
-        desc: desc,
-        date: DateTime.now(),
-      ),
-    );
     snackbar("Added Note!");
   }
 
@@ -161,29 +131,27 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: _isLoading
-            ? CircularProgressIndicator()
-            : _notes.isEmpty
-                ? Container(
-                    child: Text('Add Notes!!'),
-                  )
-                : ListView.builder(
-                    itemCount: _notes.length,
-                    itemBuilder: (context, index) {
-                      return Column(
-                        children: [
-                          noteTile(index, context),
-                          SizedBox(
-                            width: 100,
-                            child: Divider(
-                              thickness: 2,
-                              color: Theme.of(context).primaryColor,
-                            ),
-                          ),
-                        ],
-                      );
-                    },
-                  ),
+        child: _notes.isEmpty
+            ? Container(
+                child: Text('Add Notes!!'),
+              )
+            : ListView.builder(
+                itemCount: _notes.length,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      noteTile(index, context),
+                      SizedBox(
+                        width: 100,
+                        child: Divider(
+                          thickness: 2,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _addUpdateDialog,
@@ -217,7 +185,6 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.red,
           icon: Icons.delete,
           onTap: () async {
-            await Note.deleteNote(_notes[index].id);
             setState(() {
               _notes.removeAt(index);
             });
