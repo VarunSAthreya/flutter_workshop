@@ -39,7 +39,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Add [provider](https://pub.dev/packages/provider) package for state management.
 -   Separated theme data to be changed on theme toggle.
 -   Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
--   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-features).)
+-   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and guide can be found <a href="https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-features" target="_blank">here</a>.
 
 ### Advanced level Features Implemented
 
