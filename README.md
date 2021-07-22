@@ -31,7 +31,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 -   Update and delete operations for notes.
 -   Add new separate screen to display note details.
--   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic#basic-features).
+-   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic#basic-level-features).
 
 ### Intermediate level Features Implemented
 
@@ -39,13 +39,13 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Add [provider](https://pub.dev/packages/provider) package for state management.
 -   Separated theme data to be changed on theme toggle.
 -   Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
--   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and guide can be found <a href="https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-features" target="_blank">here</a>.
+-   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-level-features).
 
 ### Advanced level Features Implemented
 
 -   Added [sqllite](https://pub.dev/packages/sqflite) database to store notes.
 -   Add CRUD operations in database for notes.
--   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-features).
+-   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-level-features).
 
 ## Guide for implementing additional features:
 
