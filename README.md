@@ -27,27 +27,31 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 -   These are some additional features that are not part of the workshop but are included in the app for further knowledge.
 
-### Basic Features Implemented
+### Basic level Features Implemented
 
 -   Update and delete operations for notes.
 -   Add new separate screen to display note details.
+-   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic#basic-features).
 
-### Intermediate Features Implemented
+### Intermediate level Features Implemented
 
 -   Added Dark Theme.
 -   Add [provider](https://pub.dev/packages/provider) package for state management.
 -   Separated theme data to be changed on theme toggle.
 -   Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
+-   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-features).)
 
-### Advanced Features Implemented
+### Advanced level Features Implemented
 
 -   Added [sqllite](https://pub.dev/packages/sqflite) database to store notes.
 -   Add CRUD operations in database for notes.
+-   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-features).
 
 ## Guide for implementing additional features:
 
-### Basic Features:
+### Basic level Features:
 
+-   Code for basic level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic).
 -   Install Packages :
 
     -   To install any package run `flutter pub add <package name>` in the root of the project.
@@ -209,10 +213,11 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
             ),
         );
         ```
--   Finished with the **Basic Additional Features** of the app🎉.
+-   Finished with the **Basic level Additional Features** of the app🎉.
 
-### Intermediate Features:
+### Intermediate level Features:
 
+-   Code for intermediate level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate)
 -   Install Packages :
 
     -   To install any package run `flutter pub add <package name>` in the root of the project.
@@ -341,10 +346,11 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
             ),
         ```
 
--   Congratulations! Finished with the **Intermediate Additional Features** of the app🎉.
+-   Congratulations! Finished with the **Intermediate level Additional Features** of the app🎉.
 
-### Advanced Features:
+### Advanced level Features:
 
+-   Code for advanced level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced)
 -   Install Packages :
 
     -   To install any package run `flutter pub add <package name>` in the root of the project.
@@ -491,7 +497,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
         ```
 
--   Congratulations! Finished with the **Advanced Additional Features** of the app🎉.
+-   Congratulations! Finished with the **Advanced level Additional Features** of the app🎉.
 
 ## Further reading:
 
