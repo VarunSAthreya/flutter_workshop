@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:provider/provider.dart';
 
 import '../models/note.dart';
-import '../util/dark_notifier.dart';
 
 class Details extends StatelessWidget {
   final Note note;
@@ -16,14 +14,11 @@ class Details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     DateFormat _dateFormat = DateFormat('hh:mm, d MMMM yy');
-    bool _isDark = Provider.of<DarkNotifier>(context, listen: false).isDark;
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
-        backgroundColor: _isDark
-            ? Theme.of(context).accentColor
-            : Theme.of(context).primaryColor,
+        backgroundColor: Theme.of(context).primaryColor,
         title: Text('Note Details!'),
       ),
       body: Center(

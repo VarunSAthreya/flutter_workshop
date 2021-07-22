@@ -1,19 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'screens/home.dart';
-import 'util/dark_notifier.dart';
-import 'util/theme.dart';
 
 void main() {
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(
-        create: (_) => DarkNotifier(),
-      ),
-    ],
-    child: MyApp(),
-  ));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,8 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Workshop',
-      theme: Styles.themeData(
-        isDark: Provider.of<DarkNotifier>(context).isDark,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        primaryColor: Colors.red,
+        accentColor: Colors.white,
+        backgroundColor: const Color(0xFFEEEEEE),
+        brightness: Brightness.light,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),

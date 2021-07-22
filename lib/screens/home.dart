@@ -1,12 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:provider/provider.dart';
 
 import '../models/note.dart';
-import '../util/dark_notifier.dart';
 import '../widgets/custom_text_form.dart';
 import 'details.dart';
 
@@ -86,7 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void updateNote(int index, int id, String title, String desc) {
     _notes[index] = Note(
-      id: id,
       title: title,
       desc: desc,
       date: DateTime.now(),
@@ -95,12 +90,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void addNote(String title, String desc) {
-    Random random = new Random();
-    int id = random.nextInt(100000);
     _notes.insert(
         0,
         Note(
-          id: id,
           title: title,
           desc: desc,
           date: DateTime.now(),
@@ -110,25 +102,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    bool _isDark = Provider.of<DarkNotifier>(context, listen: false).isDark;
-
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
-        backgroundColor: _isDark
-            ? Theme.of(context).accentColor
-            : Theme.of(context).primaryColor,
+        backgroundColor: Theme.of(context).primaryColor,
         title: Text('Notes App!'),
-        actions: [
-          Switch(
-            value: _isDark,
-            onChanged: (value) {
-              _isDark = value;
-              Provider.of<DarkNotifier>(context, listen: false).darkMode =
-                  _isDark;
-            },
-          ),
-        ],
       ),
       body: Center(
         child: _notes.isEmpty
@@ -175,7 +153,6 @@ class _MyHomePageState extends State<MyHomePage> {
             desc: _notes[index].desc,
             type: 'Update',
             index: index,
-            id: _notes[index].id,
           ),
         ),
       ],
