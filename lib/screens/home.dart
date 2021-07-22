@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/notes.dart';
+import '../models/note.dart';
 import '../widgets/CusntomTextForm.dart';
 
 class MyHomePage extends StatefulWidget {
