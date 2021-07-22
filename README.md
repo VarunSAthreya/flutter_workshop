@@ -264,8 +264,8 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
             Future<void> _loadDarkPref() async {
                 await SharedPreferences.getInstance().then((prefs) {
-                final bool darkPref = prefs.getBool('isDark') ?? false;
-                _currentPrefs = PrefsState(darkMode: darkPref);
+                    final bool darkPref = prefs.getBool('isDark') ?? false;
+                    _currentPrefs = PrefsState(darkMode: darkPref);
                 });
 
                 notifyListeners();
@@ -273,7 +273,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
             Future<void> _saveDarkPref() async {
                 await SharedPreferences.getInstance().then((prefs) {
-                prefs.setBool('isDark', _currentPrefs.darkMode);
+                    prefs.setBool('isDark', _currentPrefs.darkMode);
                 });
             }
 
@@ -281,16 +281,16 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
             set darkMode(bool newValue) {
                 if (newValue == _currentPrefs.darkMode) return;
-                _currentPrefs = PrefsState(darkMode: newValue);
-                notifyListeners();
-                _saveDarkPref();
-            }
+                    _currentPrefs = PrefsState(darkMode: newValue);
+                    notifyListeners();
+                    _saveDarkPref();
+                }
             }
 
             class PrefsState {
-            final bool darkMode;
+                final bool darkMode;
 
-            const PrefsState({this.darkMode = false});
+                const PrefsState({this.darkMode = false});
             }
 
         ```
