@@ -210,3 +210,135 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
         );
         ```
 -   Finished with the **Basic Additional Features** of the app🎉.
+
+### Intermediate Features:
+
+-   Install Packages :
+
+    -   To install any package run `flutter pub add <package name>` in the root of the project.
+    -   [provider](https://pub.dev/packages/provider)
+    -   [shared_preferences](https://pub.dev/packages/shared_preferences)
+
+-   Create `theme.dart` inside `util` folder for storing theme related constants.
+
+    -   Add `isDark` property to change the theme data of the app based on the value.
+    -   The `theme.dart` file will look like this:
+
+        ```dart
+            import 'package:flutter/material.dart';
+
+            class Styles {
+            static ThemeData themeData({
+                required bool isDark,
+            }) {
+                return ThemeData(
+                primarySwatch: Colors.red,
+                primaryColor: Colors.red,
+                accentColor: isDark ? const Color(0xFF161B22) : Colors.white,
+                backgroundColor:
+                    isDark ? const Color(0xFF010409) : const Color(0xFFEEEEEE),
+                brightness: isDark ? Brightness.dark : Brightness.light,
+                visualDensity: VisualDensity.adaptivePlatformDensity,
+                );
+            }
+            }
+        ```
+
+-   Add `dark_notifier.dart` for retrieving from local storage and notify the listeners on theme change
+
+    -   Docs for `SharedPreferences` package can be found [here](https://pub.dev/documentation/shared_preferences/latest/)
+    -   Docs for `Provider` package can be found [here](https://pub.dev/documentation/provider/latest/)
+    -   More details about local storage and theming be found [video](https://www.youtube.com/watch?v=uCbHxLA9t9E&t=2213s).
+    -   The `dark_notifier.dart` file will look like this:
+
+        ```dart
+            import 'package:flutter/material.dart';
+            import 'package:shared_preferences/shared_preferences.dart';
+
+            class DarkNotifier with ChangeNotifier {
+            PrefsState _currentPrefs = const PrefsState();
+
+            DarkNotifier() {
+                _loadDarkPref();
+            }
+
+            Future<void> _loadDarkPref() async {
+                await SharedPreferences.getInstance().then((prefs) {
+                final bool darkPref = prefs.getBool('isDark') ?? false;
+                _currentPrefs = PrefsState(darkMode: darkPref);
+                });
+
+                notifyListeners();
+            }
+
+            Future<void> _saveDarkPref() async {
+                await SharedPreferences.getInstance().then((prefs) {
+                prefs.setBool('isDark', _currentPrefs.darkMode);
+                });
+            }
+
+            bool get isDark => _currentPrefs.darkMode;
+
+            set darkMode(bool newValue) {
+                if (newValue == _currentPrefs.darkMode) return;
+                _currentPrefs = PrefsState(darkMode: newValue);
+                notifyListeners();
+                _saveDarkPref();
+            }
+            }
+
+            class PrefsState {
+            final bool darkMode;
+
+            const PrefsState({this.darkMode = false});
+            }
+
+        ```
+
+-   Changes at `main.dart` has to be done for state management and theming.
+
+    -   The `main.dart` file will look like this:
+
+        ```dart
+            void main() {
+                runApp(MultiProvider(
+                    providers: [
+                    ChangeNotifierProvider(
+                        create: (_) => DarkNotifier(),
+                    ),
+                    ],
+                    child: MyApp(),
+                ));
+                }
+
+                class MyApp extends StatelessWidget {
+                @override
+                Widget build(BuildContext context) {
+                    return MaterialApp(
+                    title: 'Flutter Workshop',
+                    theme: Styles.themeData(
+                        isDark: Provider.of<DarkNotifier>(context).isDark,
+                    ),
+                    debugShowCheckedModeBanner: false,
+                    home: MyHomePage(),
+                    );
+                }
+            }
+
+        ```
+
+-   Add `Switch` button in home screen for switching theme.
+
+    -   Code for the `Switch` button is given below:
+        ```dart
+            Switch(
+                value: _isDark,
+                onChanged: (value) {
+                _isDark = value;
+                Provider.of<DarkNotifier>(context, listen: false).darkMode =
+                    _isDark;
+                },
+            ),
+        ```
+
+-   Congratulations! Finished with the **Intermediate Additional Features** of the app🎉.
