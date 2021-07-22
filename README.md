@@ -60,7 +60,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 -   Add `date` property in `Note` model to store the `DateTime` of note creation.
 
-    -   After this the constructor of `Note` model will look like this:
+    -   After this the constructor of `Note` model will look like this: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/models/note.dart)
 
         ```dart
         class Note {
@@ -79,7 +79,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Add `details.dart` screen to display note details.
 
     -   Navigate to `details.dart` file when the `ListTile` is pressed.
-    -   Code for details page is given below:
+    -   Code for details page is given below: [details.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/screens/details.dart)
 
         ```dart
             import 'package:flutter/material.dart';
@@ -155,7 +155,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
     -   Docs for `Slidable` package can be found [here](https://pub.dev/documentation/flutter_slidable/latest/)
     -   With `update` and `delete` features to the `_notes` list ie. `_notes[index] = <Updated Note>` and `_notes.removeAt(index);` respectively.
     -   (Note: I have modified the `addNote` function to `_addUpdateNote` with optional parameters to update the note.)
-    -   After this the `ListTile` with `Slidable` as a parent widget will look like this:
+    -   After this the `ListTile` with `Slidable` as a parent widget will look like this: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/screens/home.dart)
         ```dart
             Slidable(
             actionPane: SlidableDrawerActionPane(),
@@ -227,7 +227,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Create `theme.dart` inside `util` folder for storing theme related constants.
 
     -   Add `isDark` property to change the theme data of the app based on the value.
-    -   The `theme.dart` file will look like this:
+    -   The `theme.dart` file will look like this: [theme.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/util/theme.dart)
 
         ```dart
             import 'package:flutter/material.dart';
@@ -254,7 +254,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
     -   Docs for `SharedPreferences` package can be found [here](https://pub.dev/documentation/shared_preferences/latest/)
     -   Docs for `Provider` package can be found [here](https://pub.dev/documentation/provider/latest/)
     -   More details about local storage and theming be found [video](https://www.youtube.com/watch?v=uCbHxLA9t9E&t=2213s).
-    -   The `dark_notifier.dart` file will look like this:
+    -   The `dark_notifier.dart` file will look like this: [dark_notifier.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/util/dark_notifier.dart)
 
         ```dart
             import 'package:flutter/material.dart';
@@ -302,7 +302,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 -   Changes at `main.dart` has to be done for state management and theming.
 
-    -   The `main.dart` file will look like this:
+    -   The `main.dart` file will look like this: [main.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/main.dart)
 
         ```dart
             void main() {
@@ -334,7 +334,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 -   Add `Switch` button in home screen for switching theme.
 
-    -   Code for the `Switch` button is given below:
+    -   Code for the `Switch` button is given below: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/screens/home.dart)
         ```dart
             Switch(
                 value: _isDark,
@@ -361,7 +361,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Create SQL Table in the `main` function in the database for storing notes.
 -   Docs of `SQlite` package can be found [here](https://pub.dev/documentation/sqflite/latest/)
 -   Flutter example for `SQlite` can be found [here](https://flutter.dev/docs/cookbook/persistence/sqlite).
--   Code to create table in `main` function is given below:
+-   Code to create table in `main` function is given below: [main.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/main.dart)
 
     ```dart
         void main() async {
@@ -391,7 +391,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Add CRUD operations for notes SQlite database in `models/note.dart`.
 
     -   Add `id` property inside `Note` class as primary key for database.
-    -   Code for CRUD operations in `note.dart` is given below:
+    -   Code for CRUD operations in `note.dart` is given below: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/models/note.dart)
 
         ```dart
             import 'package:path/path.dart';
@@ -496,6 +496,8 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
             }
 
         ```
+
+    -   Check the addition of CRUD operations of `note` database in [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/screens/home.dart)
 
 -   Congratulations! Finished with the **Advanced level Additional Features** of the app🎉.
 
