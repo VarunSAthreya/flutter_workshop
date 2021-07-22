@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_workshop/models/notes.dart';
-import 'package:flutter_workshop/widgets/CusntomTextForm.dart';
+
+import '../models/notes.dart';
+import '../widgets/CusntomTextForm.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key}) : super(key: key);
