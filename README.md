@@ -492,3 +492,13 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
         ```
 
 -   Congratulations! Finished with the **Advanced Additional Features** of the app🎉.
+
+## Further reading:
+
+-   Topics to be covered upon the completion for more understanding of the Flutter app:
+    -   Firebase integration. [link](https://flutter.dev/docs/development/data-and-backend/firebase)
+    -   API calls using http package. [link](https://pub.dev/documentation/http/latest/)
+    -   Flutter hooks. [link](https://pub.dev/documentation/flutter_hooks/latest/)
+    -   [Riverpod](https://pub.dev/packages/riverpod) / [Bloc](https://pub.dev/packages/flutter_bloc)
+    -   Provider Architecture in flutter. [link](https://medium.com/flutter-community/flutter-architecture-provider-implementation-guide-d33133a9a4e8)
+    -   MVC Architecture in flutter. [link](https://medium.com/follow-flutter/your-next-mvc-flutter-project-1fabe2069b01)
