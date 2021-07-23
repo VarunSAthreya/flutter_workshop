@@ -4,6 +4,10 @@ This repository is a part of workshop conducted for learning the Flutter framewo
 
 The app done in the workshop is a simple note taking app. It allows users to create notes, edit them and delete them.
 
+Demo video of the app: 
+
+<img src="https://github.com/VarunSAthreya/flutter_workshop/blob/main/assets/demo.gif" alt="Demo video" height="20%" width="20%"/>
+
 ## Getting Started
 
 ### Prerequisites
