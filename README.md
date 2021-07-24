@@ -4,7 +4,7 @@ This repository is a part of workshop conducted for learning the Flutter framewo
 
 The app done in the workshop is a simple note taking app. It allows users to create notes, edit them and delete them.
 
-Demo video of the app: 
+Demo video of the app:
 
 <img src="https://github.com/VarunSAthreya/flutter_workshop/blob/main/assets/demo.gif" alt="Demo video" height="20%" width="20%"/>
 
@@ -39,7 +39,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 ### Intermediate level Features Implemented
 
--   Added Dark Theme.
+-   Add Dark Theme.
 -   Add [provider](https://pub.dev/packages/provider) package for state management.
 -   Separated theme data to be changed on theme toggle.
 -   Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
@@ -47,7 +47,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 ### Advanced level Features Implemented
 
--   Added [sqllite](https://pub.dev/packages/sqflite) database to store notes.
+-   Add [sqllite](https://pub.dev/packages/sqflite) database to store notes.
 -   Add CRUD operations in database for notes.
 -   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-level-features).
 
