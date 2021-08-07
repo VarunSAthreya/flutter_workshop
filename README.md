@@ -1,8 +1,12 @@
-# Flutter Workshop
+# [Flutter Workshop](https://drive.google.com/file/d/1YVuT1ZwP_itjpgo5MWx-8rh-yod9DC2p/view)
 
 This repository is a part of workshop conducted for learning the Flutter framework. Conducted on <code>22<sup>nd</sup> July 2021</code>.
 
-The app done in the workshop is a simple note taking app. It allows users to create notes, edit them and delete them.
+The app done in the workshop is a simple note taking app. It allows users to create notes, edit and delete them.
+
+Demo video of the app:
+
+<img src="https://github.com/VarunSAthreya/flutter_workshop/blob/main/assets/demo.gif" alt="Demo video" height="20%" width="20%"/>
 
 ## Getting Started
 
@@ -30,21 +34,21 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 ### Basic level Features Implemented
 
 -   Update and delete operations for notes.
--   Add new separate screen to display note details.
+-   Added new separate screen to display note details.
 -   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic#basic-level-features).
 
 ### Intermediate level Features Implemented
 
 -   Added Dark Theme.
--   Add [provider](https://pub.dev/packages/provider) package for state management.
+-   Added [provider](https://pub.dev/packages/provider) package for state management.
 -   Separated theme data to be changed on theme toggle.
--   Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
+-   Added [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
 -   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-level-features).
 
 ### Advanced level Features Implemented
 
 -   Added [sqllite](https://pub.dev/packages/sqflite) database to store notes.
--   Add CRUD operations in database for notes.
+-   Added CRUD operations in database for notes.
 -   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-level-features).
 
 ## Guide for implementing additional features:
