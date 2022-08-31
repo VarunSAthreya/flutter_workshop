@@ -1,8 +1,8 @@
 # [Flutter Workshop]()
 
-This repository is a part of workshop conducted for learning the Flutter framework. Conducted on <code>22<sup>nd</sup> July 2021</code>.
+This repository is a part of a workshop conducted for learning the Flutter framework. Conducted on <code>22<sup>nd</sup> July 2021</code>.
 
-The app done in the workshop is a simple note taking app. It allows users to create notes, edit and delete them.
+The app done in the workshop is a simple note-taking app. It allows users to create notes, and edit and delete them.
 
 Demo video of the app:
 
@@ -24,8 +24,8 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Make sure you have the Flutter SDK installed and other prerequisites.
 -   Fork the repository and clone it to your local machine.
 -   Open Android Studio or VSCode and import the project.
--   To download the dependencies run `flutter pub get` in the root of the project.
--   To run the app run `flutter run` in the root of the project.
+-   To download the dependencies run `flutter pub get` at the root of the project.
+-   To run the app run `flutter run` at the root of the project.
 
 ## Additional Features
 
@@ -34,7 +34,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 ### Basic level Features Implemented
 
 -   Update and delete operations for notes.
--   Added new separate screen to display note details.
+-   Added a new separate screen to display note details.
 -   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic#basic-level-features).
 
 ### Intermediate level Features Implemented
@@ -48,7 +48,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 ### Advanced level Features Implemented
 
 -   Added [sqllite](https://pub.dev/packages/sqflite) database to store notes.
--   Added CRUD operations in database for notes.
+-   Added CRUD operations in the database for notes.
 -   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-level-features).
 
 ## Guide for implementing additional features:
@@ -62,9 +62,9 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
     -   [flutter_slidable](https://pub.dev/packages/flutter_slidable)
     -   [intl](https://pub.dev/packages/intl)
 
--   Add `date` property in `Note` model to store the `DateTime` of note creation.
+-   Add the `date` property in the `Note` model to store the `DateTime` of note creation.
 
-    -   After this the constructor of `Note` model will look like this: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/models/note.dart)
+    -   After this, the constructor of the `Note` model will look like this: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/models/note.dart)
 
         ```dart
         class Note {
@@ -144,9 +144,9 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
             }
         ```
 
--   Add `snackbar` to show on note's CRUD operations.
+-   Add a `snackbar` to show on note's CRUD operations.
 
-    -   Docs for `SnackBar` class cab be found [here](https://api.flutter.dev/flutter/material/SnackBar-class.html)
+    -   Docs for `SnackBar` class can be found [here](https://api.flutter.dev/flutter/material/SnackBar-class.html)
     -   Code for snackbar is given below:
         ```dart
             void snackbar(String message) {
@@ -159,7 +159,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
     -   Docs for `Slidable` package can be found [here](https://pub.dev/documentation/flutter_slidable/latest/)
     -   With `update` and `delete` features to the `_notes` list ie. `_notes[index] = <Updated Note>` and `_notes.removeAt(index);` respectively.
     -   (Note: I have modified the `addNote` function to `_addUpdateNote` with optional parameters to update the note.)
-    -   After this the `ListTile` with `Slidable` as a parent widget will look like this: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/screens/home.dart)
+    -   After this, the `ListTile` with `Slidable` as a parent widget will look like this: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/screens/home.dart)
         ```dart
             Slidable(
             actionPane: SlidableDrawerActionPane(),
@@ -221,16 +221,16 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 ### Intermediate level Features:
 
--   Code for intermediate level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate)
+-   Code for intermediate-level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate)
 -   Install Packages :
 
     -   To install any package run `flutter pub add <package name>` in the root of the project.
     -   [provider](https://pub.dev/packages/provider)
     -   [shared_preferences](https://pub.dev/packages/shared_preferences)
 
--   Create `theme.dart` inside `util` folder for storing theme related constants.
+-   Create a `theme.dart` inside the `util` folder for storing theme-related constants.
 
-    -   Add `isDark` property to change the theme data of the app based on the value.
+    -   Add the `isDark` property to change the theme data of the app based on the value.
     -   The `theme.dart` file will look like this: [theme.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/util/theme.dart)
 
         ```dart
@@ -253,7 +253,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
             }
         ```
 
--   Add `dark_notifier.dart` for retrieving from local storage and notify the listeners on theme change
+-   Add `dark_notifier.dart` for retrieving from local storage and notify the listeners of theme change
 
     -   Docs for `SharedPreferences` package can be found [here](https://pub.dev/documentation/shared_preferences/latest/)
     -   Docs for `Provider` package can be found [here](https://pub.dev/documentation/provider/latest/)
@@ -336,7 +336,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
         ```
 
--   Add `Switch` button in home screen for switching theme.
+-   Add the `Switch` button on the home screen for switching the theme.
 
     -   Code for the `Switch` button is given below: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/screens/home.dart)
         ```dart
@@ -394,7 +394,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 -   Add CRUD operations for notes SQlite database in `models/note.dart`.
 
-    -   Add `id` property inside `Note` class as primary key for database.
+    -   Add the `id` property inside the `Note` class as the primary key for the database.
     -   Code for CRUD operations in `note.dart` is given below: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/models/note.dart)
 
         ```dart
