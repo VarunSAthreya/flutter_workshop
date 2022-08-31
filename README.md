@@ -58,7 +58,7 @@ Below is the list of features that can be used to learn the topics.
 -   Dynamic theme changing. (Light/Dark Theme)
 -    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and the guide can be found [here](#guide-intermediate-level-features).
 
-### Advanced level Features
+### Advance level Features
 
 -   Add [sqllite](https://pub.dev/packages/sqflite) database to store notes.
 -   Add CRUD operations in the database for notes.
