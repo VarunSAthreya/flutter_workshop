@@ -23,12 +23,16 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Make sure you have the Flutter SDK installed and other prerequisites.
 -   Fork the repository and clone it to your local machine.
 -   Open Android Studio or VSCode and import the project.
--   To download the dependencies run `flutter pub get` at the root of the project.
+-   To download the dependencies run `flutter pub get` at the project's root directory.
 -   To run the app run `flutter run` at the project's root directory.
 
 ## Features
 
--   The Starter Code for the project can be found [here](https://github.com/VarunSAthreya/flutter_workshop) in the main branch
+- The features are divided into 3 parts
+  - [Basic](#beginner-level-features)
+  - [Intermediate](#intermediate-level-features)
+  - [Advance](#advance-level-features)
+- But first, let's start with the [Starter](#starter) code for the app.
 
 ### Starter
 - In the starter code there is a `MyHomePage` class which is the `Home page`, used to show the notes.
@@ -44,21 +48,21 @@ Below is the list of features that can be used to learn the topics.
 -   Update and delete operations for notes.
 - Create a `Snackbar` on the Update and Delete operation.
 - Add [`Slidable`](https://pub.dev/packages/flutter_slidable) to denote the Update and Delete feature.
--   If you get stuck anywhere you can find the code [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and the guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic#basic-level-features).
+-   If you get stuck anywhere you can find the code [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and the guide can be found [here](#guide-basic-level-features).
 
 ### Intermediate level Features
 
 -   Add [provider](https://pub.dev/packages/provider) package for state management.
--   Separat theme data to be changed on theme toggle.
+-   Separate theme data to be changed on theme toggle.
 -   Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
 -   Dynamic theme changing. (Light/Dark Theme)
--    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and the guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-level-features).
+-    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and the guide can be found [here](#guide-intermediate-level-features).
 
-### Advanced level Features
+### Advance level Features
 
 -   Add [sqllite](https://pub.dev/packages/sqflite) database to store notes.
 -   Add CRUD operations in the database for notes.
--    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and the guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-level-features).
+-    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and the guide can be found [here](#guide-advanced-level-features).
 
 ## Guide for implementing features:
 
