@@ -1,17 +1,16 @@
 # [Flutter Workshop]()
 
-This repository is a part of a workshop conducted for learning the Flutter framework. Conducted on <code>22<sup>nd</sup> July 2021</code>.
+This is a crash course to learn a few of the advanced topics in flutter such as state management, changing themes, storing data in local storage, etc.
 
-The app done in the workshop is a simple note-taking app. It allows users to create notes, and edit and delete them.
+Final Demo video of the app:
 
-Demo video of the app:
-
-<img src="https://github.com/VarunSAthreya/flutter_workshop/blob/main/assets/demo.gif" alt="Demo video" height="20%" width="20%"/>
+<img src="https://github.com/VarunSAthreya/flutter_workshop/blob/main/assets/demo.gif?raw=true" alt="Demo video" height="20%" width="20%"/>
 
 ## Getting Started
 
 ### Prerequisites
 
+- Basic Knowledge about Flutter and Dart.
 -   [Flutter SDK](https://flutter.dev/docs/get-started/install)
 -   [Android Studio](https://developer.android.com/studio) or [VSCode](https://code.visualstudio.com/download)
 
@@ -25,35 +24,45 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 -   Fork the repository and clone it to your local machine.
 -   Open Android Studio or VSCode and import the project.
 -   To download the dependencies run `flutter pub get` at the root of the project.
--   To run the app run `flutter run` at the root of the project.
+-   To run the app run `flutter run` at the project's root directory.
 
-## Additional Features
+## Features
 
--   These are some additional features that are not part of the workshop but are included in the app for further knowledge.
+-   The Starter Code for the project can be found [here](https://github.com/VarunSAthreya/flutter_workshop) in the main branch
 
-### Basic level Features Implemented
+### Starter
+- In the starter code there is a `MyHomePage` class which is the `Home page`, used to show the notes.
+- Also I have created a `custom textfiled` to use in other places.
+- And at last, there is a `Note` model which would contain the `title` and  `description` of the note.
 
+Below is the list of features that can be used to learn the topics.
+
+### Beginner level Features
+
+- Add `date` to the `Note` model.
+- Create a new screen to show the `Note.title` and `Note.desc`.
 -   Update and delete operations for notes.
--   Added a new separate screen to display note details.
--   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic#basic-level-features).
+- Create a `Snackbar` on the Update and Delete operation.
+- Add [`Slidable`](https://pub.dev/packages/flutter_slidable) to denote the Update and Delete feature.
+-   If you get stuck anywhere you can find the code [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and the guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic#basic-level-features).
 
-### Intermediate level Features Implemented
+### Intermediate level Features
 
--   Added Dark Theme.
--   Added [provider](https://pub.dev/packages/provider) package for state management.
--   Separated theme data to be changed on theme toggle.
--   Added [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
--   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-level-features).
+-   Add [provider](https://pub.dev/packages/provider) package for state management.
+-   Separat theme data to be changed on theme toggle.
+-   Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
+-   Dynamic theme changing. (Light/Dark Theme)
+-    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and the guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate#intermediate-level-features).
 
-### Advanced level Features Implemented
+### Advanced level Features
 
--   Added [sqllite](https://pub.dev/packages/sqflite) database to store notes.
--   Added CRUD operations in the database for notes.
--   Code can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-level-features).
+-   Add [sqllite](https://pub.dev/packages/sqflite) database to store notes.
+-   Add CRUD operations in the database for notes.
+-    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and the guide can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced#advanced-level-features).
 
-## Guide for implementing additional features:
+## Guide for implementing features:
 
-### Basic level Features:
+### Guide: Basic level Features:
 
 -   Code for basic level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic).
 -   Install Packages :
@@ -217,9 +226,9 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
             ),
         );
         ```
--   Finished with the **Basic level Additional Features** of the app🎉.
+-   Finished with the **Basic level Features** of the app🎉.
 
-### Intermediate level Features:
+### Guide: Intermediate level Features:
 
 -   Code for intermediate-level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate)
 -   Install Packages :
@@ -350,9 +359,9 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
             ),
         ```
 
--   Congratulations! Finished with the **Intermediate level Additional Features** of the app🎉.
+-   Congratulations! Finished with the **Intermediate level Features** of the app🎉.
 
-### Advanced level Features:
+### Guide: Advanced level Features:
 
 -   Code for advanced level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced)
 -   Install Packages :
@@ -503,7 +512,7 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
     -   Check the addition of CRUD operations of `note` database in [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/screens/home.dart)
 
--   Congratulations! Finished with the **Advanced level Additional Features** of the app🎉.
+-   Congratulations! Finished with the **Advanced level Features** of the app🎉.
 
 ## Further reading:
 
