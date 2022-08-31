@@ -11,8 +11,8 @@ Final Demo video of the app:
 ### Prerequisites
 
 - Basic Knowledge about Flutter and Dart.
-- [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- [Android Studio](https://developer.android.com/studio) or [VSCode](https://code.visualstudio.com/download)
+-   [Flutter SDK](https://flutter.dev/docs/get-started/install)
+-   [Android Studio](https://developer.android.com/studio) or [VSCode](https://code.visualstudio.com/download)
 
 To setup Flutter in Android Studio check [here](https://flutter.dev/docs/development/tools/android-studio)
 
@@ -20,18 +20,21 @@ To setup Flutter in VSCode check [here](https://flutter.dev/docs/development/too
 
 ### Running the app
 
-- Make sure you have the Flutter SDK installed and other prerequisites.
-- Fork the repository and clone it to your local machine.
-- Open Android Studio or VSCode and import the project.
-- To download the dependencies run `flutter pub get` at the root of the project.
-- To run the app run `flutter run` at the project's root directory.
+-   Make sure you have the Flutter SDK installed and other prerequisites.
+-   Fork the repository and clone it to your local machine.
+-   Open Android Studio or VSCode and import the project.
+-   To download the dependencies run `flutter pub get` at the project's root directory.
+-   To run the app run `flutter run` at the project's root directory.
 
 ## Features
 
-- The Starter Code for the project can be found [here](https://github.com/VarunSAthreya/flutter_workshop) in the main branch
+- The features are divided into 3 parts
+  - [Basic](#beginner-level-features)
+  - [Intermediate](#intermediate-level-features)
+  - [Advance](#advance-level-features)
+- But first, let's start with the [Starter](#starter) code for the app.
 
 ### Starter
-
 - In the starter code there is a `MyHomePage` class which is the `Home page`, used to show the notes.
 - Also I have created a `custom textfiled` to use in other places.
 - And at last, there is a `Note` model which would contain the `title` and  `description` of the note.
@@ -42,39 +45,39 @@ Below is the list of features that can be used to learn the topics.
 
 - Add `date` to the `Note` model.
 - Create a new screen to show the `Note.title` and `Note.desc`.
-- Update and delete operations for notes.
+-   Update and delete operations for notes.
 - Create a `Snackbar` on the Update and Delete operation.
 - Add [`Slidable`](https://pub.dev/packages/flutter_slidable) to denote the Update and Delete feature.
-- If you get stuck anywhere you can find the code [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and the guide can be found [here](#guide-basic-level-features).
+-   If you get stuck anywhere you can find the code [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic), and the guide can be found [here](#guide-basic-level-features).
 
 ### Intermediate level Features
 
-- Add [provider](https://pub.dev/packages/provider) package for state management.
-- Separate theme data to be changed on theme toggle.
-- Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
-- Dynamic theme changing. (Light/Dark Theme)
-- If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and the guide can be found [here](#guide-intermediate-level-features).
+-   Add [provider](https://pub.dev/packages/provider) package for state management.
+-   Separate theme data to be changed on theme toggle.
+-   Add [shared preferences](https://pub.dev/packages/shared_preferences) package to store the theme preference.
+-   Dynamic theme changing. (Light/Dark Theme)
+-    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate), and the guide can be found [here](#guide-intermediate-level-features).
 
 ### Advanced level Features
 
-- Add [sqllite](https://pub.dev/packages/sqflite) database to store notes.
-- Add CRUD operations in the database for notes.
-- If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and the guide can be found [here](#guide-advanced-level-features).
+-   Add [sqllite](https://pub.dev/packages/sqflite) database to store notes.
+-   Add CRUD operations in the database for notes.
+-    If you get stuck anywhere you can find the code  [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced), and the guide can be found [here](#guide-advanced-level-features).
 
-## Guide for implementing features
+## Guide for implementing features:
 
-### Guide: Basic level Features
+### Guide: Basic level Features:
 
-- Code for basic level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic).
-- Install Packages :
+-   Code for basic level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/basic).
+-   Install Packages :
 
-  - To install any package run `flutter pub add <package name>` in the root of the project.
-  - [flutter_slidable](https://pub.dev/packages/flutter_slidable)
-  - [intl](https://pub.dev/packages/intl)
+    -   To install any package run `flutter pub add <package name>` in the root of the project.
+    -   [flutter_slidable](https://pub.dev/packages/flutter_slidable)
+    -   [intl](https://pub.dev/packages/intl)
 
-- Add the `date` property in the `Note` model to store the `DateTime` of note creation.
+-   Add the `date` property in the `Note` model to store the `DateTime` of note creation.
 
-  - After this, the constructor of the `Note` model will look like this: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/models/note.dart)
+    -   After this, the constructor of the `Note` model will look like this: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/models/note.dart)
 
         ```dart
         class Note {
@@ -90,10 +93,10 @@ Below is the list of features that can be used to learn the topics.
         }
         ```
 
-- Add `details.dart` screen to display note details.
+-   Add `details.dart` screen to display note details.
 
-  - Navigate to `details.dart` file when the `ListTile` is pressed.
-  - Code for details page is given below: [details.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/screens/details.dart)
+    -   Navigate to `details.dart` file when the `ListTile` is pressed.
+    -   Code for details page is given below: [details.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/screens/details.dart)
 
         ```dart
             import 'package:flutter/material.dart';
@@ -154,11 +157,10 @@ Below is the list of features that can be used to learn the topics.
             }
         ```
 
-- Add a `snackbar` to show on note's CRUD operations.
+-   Add a `snackbar` to show on note's CRUD operations.
 
-  - Docs for `SnackBar` class can be found [here](https://api.flutter.dev/flutter/material/SnackBar-class.html)
-  - Code for snackbar is given below:
-
+    -   Docs for `SnackBar` class can be found [here](https://api.flutter.dev/flutter/material/SnackBar-class.html)
+    -   Code for snackbar is given below:
         ```dart
             void snackbar(String message) {
                 ScaffoldMessenger.of(context)
@@ -166,12 +168,11 @@ Below is the list of features that can be used to learn the topics.
             }
         ```
 
-- Add `Slidable` as a parent widget to the `ListTile` and add update and delete operations to the `actions` and `secondaryActions` of the widget.
-  - Docs for `Slidable` package can be found [here](https://pub.dev/documentation/flutter_slidable/latest/)
-  - With `update` and `delete` features to the `_notes` list ie. `_notes[index] = <Updated Note>` and `_notes.removeAt(index);` respectively.
-  - (Note: I have modified the `addNote` function to `_addUpdateNote` with optional parameters to update the note.)
-  - After this, the `ListTile` with `Slidable` as a parent widget will look like this: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/screens/home.dart)
-
+-   Add `Slidable` as a parent widget to the `ListTile` and add update and delete operations to the `actions` and `secondaryActions` of the widget.
+    -   Docs for `Slidable` package can be found [here](https://pub.dev/documentation/flutter_slidable/latest/)
+    -   With `update` and `delete` features to the `_notes` list ie. `_notes[index] = <Updated Note>` and `_notes.removeAt(index);` respectively.
+    -   (Note: I have modified the `addNote` function to `_addUpdateNote` with optional parameters to update the note.)
+    -   After this, the `ListTile` with `Slidable` as a parent widget will look like this: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/basic/lib/screens/home.dart)
         ```dart
             Slidable(
             actionPane: SlidableDrawerActionPane(),
@@ -229,22 +230,21 @@ Below is the list of features that can be used to learn the topics.
             ),
         );
         ```
+-   Finished with the **Basic level Features** of the app🎉.
 
-- Finished with the **Basic level Features** of the app🎉.
+### Guide: Intermediate level Features:
 
-### Guide: Intermediate level Features
+-   Code for intermediate-level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate)
+-   Install Packages :
 
-- Code for intermediate-level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/intermediate)
-- Install Packages :
+    -   To install any package run `flutter pub add <package name>` in the root of the project.
+    -   [provider](https://pub.dev/packages/provider)
+    -   [shared_preferences](https://pub.dev/packages/shared_preferences)
 
-  - To install any package run `flutter pub add <package name>` in the root of the project.
-  - [provider](https://pub.dev/packages/provider)
-  - [shared_preferences](https://pub.dev/packages/shared_preferences)
+-   Create a `theme.dart` inside the `util` folder for storing theme-related constants.
 
-- Create a `theme.dart` inside the `util` folder for storing theme-related constants.
-
-  - Add the `isDark` property to change the theme data of the app based on the value.
-  - The `theme.dart` file will look like this: [theme.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/util/theme.dart)
+    -   Add the `isDark` property to change the theme data of the app based on the value.
+    -   The `theme.dart` file will look like this: [theme.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/util/theme.dart)
 
         ```dart
             import 'package:flutter/material.dart';
@@ -266,12 +266,12 @@ Below is the list of features that can be used to learn the topics.
             }
         ```
 
-- Add `dark_notifier.dart` for retrieving from local storage and notify the listeners of theme change
+-   Add `dark_notifier.dart` for retrieving from local storage and notify the listeners of theme change
 
-  - Docs for `SharedPreferences` package can be found [here](https://pub.dev/documentation/shared_preferences/latest/)
-  - Docs for `Provider` package can be found [here](https://pub.dev/documentation/provider/latest/)
-  - More details about local storage and theming be found [video](https://www.youtube.com/watch?v=uCbHxLA9t9E&t=2213s).
-  - The `dark_notifier.dart` file will look like this: [dark_notifier.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/util/dark_notifier.dart)
+    -   Docs for `SharedPreferences` package can be found [here](https://pub.dev/documentation/shared_preferences/latest/)
+    -   Docs for `Provider` package can be found [here](https://pub.dev/documentation/provider/latest/)
+    -   More details about local storage and theming be found [video](https://www.youtube.com/watch?v=uCbHxLA9t9E&t=2213s).
+    -   The `dark_notifier.dart` file will look like this: [dark_notifier.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/util/dark_notifier.dart)
 
         ```dart
             import 'package:flutter/material.dart';
@@ -317,9 +317,9 @@ Below is the list of features that can be used to learn the topics.
 
         ```
 
-- Changes at `main.dart` has to be done for state management and theming.
+-   Changes at `main.dart` has to be done for state management and theming.
 
-  - The `main.dart` file will look like this: [main.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/main.dart)
+    -   The `main.dart` file will look like this: [main.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/main.dart)
 
         ```dart
             void main() {
@@ -349,10 +349,9 @@ Below is the list of features that can be used to learn the topics.
 
         ```
 
-- Add the `Switch` button on the home screen for switching the theme.
+-   Add the `Switch` button on the home screen for switching the theme.
 
-  - Code for the `Switch` button is given below: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/screens/home.dart)
-
+    -   Code for the `Switch` button is given below: [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/intermediate/lib/screens/home.dart)
         ```dart
             Switch(
                 value: _isDark,
@@ -364,22 +363,22 @@ Below is the list of features that can be used to learn the topics.
             ),
         ```
 
-- Congratulations! Finished with the **Intermediate level Features** of the app🎉.
+-   Congratulations! Finished with the **Intermediate level Features** of the app🎉.
 
-### Guide: Advanced level Features
+### Guide: Advanced level Features:
 
-- Code for advanced level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced)
-- Install Packages :
+-   Code for advanced level features can be found [here](https://github.com/VarunSAthreya/flutter_workshop/tree/advanced)
+-   Install Packages :
 
-  - To install any package run `flutter pub add <package name>` in the root of the project.
-  - [sqflite](https://pub.dev/packages/sqflite)
-  - [path](https://pub.dev/packages/path)
+    -   To install any package run `flutter pub add <package name>` in the root of the project.
+    -   [sqflite](https://pub.dev/packages/sqflite)
+    -   [path](https://pub.dev/packages/path)
 
-- Add `SQlite` database to store notes.
-- Create SQL Table in the `main` function in the database for storing notes.
-- Docs of `SQlite` package can be found [here](https://pub.dev/documentation/sqflite/latest/)
-- Flutter example for `SQlite` can be found [here](https://flutter.dev/docs/cookbook/persistence/sqlite).
-- Code to create table in `main` function is given below: [main.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/main.dart)
+-   Add `SQlite` database to store notes.
+-   Create SQL Table in the `main` function in the database for storing notes.
+-   Docs of `SQlite` package can be found [here](https://pub.dev/documentation/sqflite/latest/)
+-   Flutter example for `SQlite` can be found [here](https://flutter.dev/docs/cookbook/persistence/sqlite).
+-   Code to create table in `main` function is given below: [main.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/main.dart)
 
     ```dart
         void main() async {
@@ -406,10 +405,10 @@ Below is the list of features that can be used to learn the topics.
         }
     ```
 
-- Add CRUD operations for notes SQlite database in `models/note.dart`.
+-   Add CRUD operations for notes SQlite database in `models/note.dart`.
 
-  - Add the `id` property inside the `Note` class as the primary key for the database.
-  - Code for CRUD operations in `note.dart` is given below: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/models/note.dart)
+    -   Add the `id` property inside the `Note` class as the primary key for the database.
+    -   Code for CRUD operations in `note.dart` is given below: [note.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/models/note.dart)
 
         ```dart
             import 'package:path/path.dart';
@@ -515,16 +514,16 @@ Below is the list of features that can be used to learn the topics.
 
         ```
 
-  - Check the addition of CRUD operations of `note` database in [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/screens/home.dart)
+    -   Check the addition of CRUD operations of `note` database in [home.dart](https://github.com/VarunSAthreya/flutter_workshop/blob/advanced/lib/screens/home.dart)
 
-- Congratulations! Finished with the **Advanced level Features** of the app🎉.
+-   Congratulations! Finished with the **Advanced level Features** of the app🎉.
 
-## Further reading
+## Further reading:
 
-- Topics to be covered upon the completion for more understanding of the Flutter app:
-  - Firebase integration. [link](https://flutter.dev/docs/development/data-and-backend/firebase)
-  - API calls using http package. [link](https://pub.dev/documentation/http/latest/)
-  - Flutter hooks. [link](https://pub.dev/documentation/flutter_hooks/latest/)
-  - [Riverpod](https://pub.dev/packages/riverpod) / [Bloc](https://pub.dev/packages/flutter_bloc)
-  - Provider Architecture in flutter. [link](https://medium.com/flutter-community/flutter-architecture-provider-implementation-guide-d33133a9a4e8)
-  - MVC Architecture in flutter. [link](https://medium.com/follow-flutter/your-next-mvc-flutter-project-1fabe2069b01)
+-   Topics to be covered upon the completion for more understanding of the Flutter app:
+    -   Firebase integration. [link](https://flutter.dev/docs/development/data-and-backend/firebase)
+    -   API calls using http package. [link](https://pub.dev/documentation/http/latest/)
+    -   Flutter hooks. [link](https://pub.dev/documentation/flutter_hooks/latest/)
+    -   [Riverpod](https://pub.dev/packages/riverpod) / [Bloc](https://pub.dev/packages/flutter_bloc)
+    -   Provider Architecture in flutter. [link](https://medium.com/flutter-community/flutter-architecture-provider-implementation-guide-d33133a9a4e8)
+    -   MVC Architecture in flutter. [link](https://medium.com/follow-flutter/your-next-mvc-flutter-project-1fabe2069b01)
